@@ -1,6 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+void colours_and_ohms(){
+
+}
+
+void cores_e_ohms(){
+    printf("********************************************\n");
+    printf("* Descobrir a cor das resistencias ou vice-versa *\n");
+    printf("********************************************\n");
+
+} 
+
 void calucation_of_resistances(){
 
 }
@@ -86,10 +97,10 @@ void menu_english(){
         printf("*************** MENU ***********************\n");
         printf("********************************************\n");
         printf("1. Calculation of resistances\n");
-        printf("2. Theorems of the electrial Circuit\n");
-        printf("3. Calculation of capacitors\n");
-        printf("4. Calculation of coils\n");
-        printf("5. Electronic color code\n");
+        printf("2. Electronic color code\n");
+        printf("3. Theorems of the electrial Circuit\n");
+        printf("4. Calculation of capacitors\n");
+        printf("5. Calculation of coils\n");
         printf("6. Digital Lab, waveform visualization\n");
         printf("7. Manual\n");
         printf("0. Close the program\n");
@@ -121,10 +132,10 @@ void menu(){
     printf("*************** MAIN MENU ******************\n");
     printf("********************************************\n");
     printf("1. Calculo de resistencias\n");
-    printf("2. Teoremas de circuitos eletricos\n");
-    printf("3. Calculo de condensadores\n");
-    printf("4. Calculo de bobines\n");
-    printf("5. Codigo de cores de resistencias\n");
+    printf("2. Codigo das cores de resistencias\n");
+    printf("3. Teoremas de circuitos eletricos\n");
+    printf("4. Calculo de condensadores\n");
+    printf("5. Calculo de bobines\n");
     printf("6. Digital Lab, waveform visualization\n");
     printf("7. Manual\n");
     printf("0. Fechar programa\n");
@@ -145,6 +156,9 @@ void menu(){
             calculo_resistencia();
             break;
         case 2:
+            cores_e_ohms();
+            break;
+        case 3:
             printf("HEY HEY HEY");
         default:
             printf("Opção inválida. Por favor, insere algum numero\n");
