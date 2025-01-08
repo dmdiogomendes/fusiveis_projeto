@@ -1,0 +1,1 @@
+cores_e_ohms

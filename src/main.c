@@ -6,9 +6,57 @@ void colours_and_ohms(){
 }
 
 void cores_e_ohms(){
+    int opcao;
+    int numero_resistencias;
+    int[5] numero_de_bandas;
+    char c;
+    int valor_resistencia;
+
+    // Valores das resistências;
+    char* cores[] = {
+        "black", "brown", "red", "orange", "yellow",
+        "green", "blue", "violet", "gray", "white"
+    };
+
     printf("********************************************\n");
     printf("* Descobrir a cor das resistencias ou vice-versa *\n");
     printf("********************************************\n");
+    printf("* Qual o valores que tens? *\n");
+    printf(" 1. Cores da resistencia \n");
+    printf(" 2. Valor da resistencia (OHMS) \n");
+    printf("Opção: \n");
+    
+    
+
+    if (scanf("%d", &opcao) != 1) {
+            while ((c = getchar()) != '\n' && c != EOF); // clear the buffer
+            printf("Option is not valid. Plz, insert some number of the options above.\n");
+            printf("%d", opcao);
+            opcao = 99;
+    };
+
+    switch (opcao)
+    {
+    case 1:
+        printf("Quantas bandas têm a resistencia?");
+        scanf("%d", &numero_de_bandas);
+        break;
+    case 2:
+        printf("Quantas bandas têm a resistencia? 4 ou 5\n");
+        scanf("%d", &numero_de_bandas);
+
+        printf("Valor da resistencia em ohms\n");
+        scanf("%d", &valor_resistencia);
+        printf("VALOR DA RESISTENCIA é %d ", valor_resistencia);
+
+        valor_resistencia = valor_resistencia % 1000;        
+
+        printf("VALOR DA RESISTENCIA é %d ", valor_resistencia);
+
+        break;
+    default:
+        break;
+    }
 
 } 
 
@@ -22,6 +70,8 @@ void calculo_resistencia(){
     int numero_resistencias;
     char c;
     
+    // system("cls") - esta expressão é para o windows
+    system("clear"); // expressao para mac
     printf("********************************************\n");
     printf("**** Calcular o valores da resistencias*****\n");
     printf("********************************************\n");
